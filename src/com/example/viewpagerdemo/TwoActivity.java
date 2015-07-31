@@ -31,7 +31,7 @@ public class TwoActivity extends Activity implements OnPageChangeListener{
 		
 //		imgIdArray = new int[]{R.drawable.item01, R.drawable.item02, R.drawable.item03, R.drawable.item04,
 //				R.drawable.item05,R.drawable.item06, R.drawable.item07, R.drawable.item08};
-		imgIdArray = new int[]{R.drawable.item01, R.drawable.item02};
+		imgIdArray = new int[]{R.drawable.item01};
 		
 		
 		tips = new ImageView[imgIdArray.length];
@@ -103,7 +103,11 @@ public class TwoActivity extends Activity implements OnPageChangeListener{
 
 		@Override
 		public int getCount() {
-			return Integer.MAX_VALUE;
+			if(imgIdArray.length == 1){
+				return 1;
+			}else{
+				return Integer.MAX_VALUE;
+			}
 		}
 
 		@Override
